@@ -1,0 +1,46 @@
+body{background-color: black;}
+
+h1{
+    font-size: 24px;
+    color:orangered;
+    background-color: black;
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    color:orangered;
+    background-color: black;
+    text-align: center;
+}
+
+p{
+    font-size: 16px;
+    background-color: black;
+text-align: justify;
+}
+
+#umc{
+color: rgb(0, 255, 13);
+background-color: aliceblue;
+}
+
+#parag1{
+    color: darkred;
+    background-color: rgb(255, 255, 255);
+
+}
+
+
+#parag2{
+    color: darkred;
+    background-color: rgb(255, 255, 255);
+    
+}
+
+
+#parag3{
+    color: darkred;
+    background-color:rgb(255, 255, 255);
+    
+}
