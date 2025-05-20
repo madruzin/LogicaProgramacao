@@ -1,0 +1,25 @@
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Sobrenome</th>
+        <th>E-mail</th>
+        <th>Excluir</th>
+    </tr>
+    </thead>
+    <tbody>
+        <td>{$row['ID']}</td>
+        <td>{$row['NOME']}</td>
+        <td>{$row['SOBRENOME']}</td>
+        <td>{$row['EMAIL']}</td>
+        <td>{$row['ID']}</td>
+        <TD>
+            <form acton="excluirCadastro.php" method="post">
+                <input type="hidden" name="id" value="{row['ID']}">
+                <input type="submit" id="btn-excluir" value="'Excluir">
+            </form>
+        </form>
+        </TD>
+    </tbody>
+</table>

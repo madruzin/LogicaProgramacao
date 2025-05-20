@@ -55,15 +55,46 @@
                 $resultado = $stmt->get_result();
                 
                 if ($resultado->num_rows >0){
-                    echo "ELE EXISTE";
-                    //Armazenar as informações dele
                     $row = $resultado->fetch_assoc();
-                    echo var_dump($row);
-                }else{ 
-                    echo "ELE NÃO EXISTE";
-                }
+                    echo "
+                    <table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Sobrenome</th>
+        <th>E-mail</th>
+        <th>Excluir</th>
+    </tr>
+    </thead>
+    <tbody>
+        <td>{$row['ID']}</td>
+        <td>{$row['NOME']}</td>
+        <td>{$row['SOBRENOME']}</td>
+        <td>{$row['EMAIL']}</td>
+        <TD>
+            <form action='excluirCadastro.php' method='post'>
+                <input type='hidden' name='id' value='{$row['ID']}'>
+                <input type='submit' id='btn-excluir' value='Excluir'>
+            </form>
+        </form>
+        </TD>
+    </tbody>
+</table>
+                    
+                    
+";
+            }else{
+                echo "<div class='mensagem erro'> E-mail $email não econtrado </div>";
             }
-        } 
+            //Encerra a consulta SQL
+            $stmt->close();
+        } else{
+            echo "<div class='mensagem erro'>Erro na consulta </div>";
+        }
+        //Encerra a conexão com banco de dados
+        $conn->close();
+    }
     ?>  
 
 
